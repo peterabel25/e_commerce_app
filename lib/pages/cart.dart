@@ -1,5 +1,8 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, sized_box_for_whitespace
 
+import 'package:e_commerce_app/custom_widgets/cartWidget.dart';
+import 'package:e_commerce_app/custom_widgets/product_counter.dart';
+import 'package:e_commerce_app/custom_widgets/selectedproducts.dart';
 import 'package:flutter/material.dart';
 
 class Cart extends StatelessWidget {
@@ -16,69 +19,12 @@ class Cart extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Card(
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 5,top:5 ),
-                  child: Row(
-                    mainAxisAlignment:MainAxisAlignment.start,
-                    children: [
-                      CircleAvatar(backgroundColor:Color.fromARGB(255, 158, 158, 158) ,
-                        radius: 12,
-                      ),
-                    ],
-                  ),
-                ),
-                Image.asset("assets/images/phone.jpg", width: 60),
-                Divider(),
-                Text("FitBit Charge",style:TextStyle(fontWeight:FontWeight.bold,fontSize:13,letterSpacing:1   ) ,),
-                Text("Blue - Medium",style:TextStyle(color:Colors.grey,fontSize:8 ,letterSpacing:1,wordSpacing:1 ,fontWeight:FontWeight.bold   ) ,),
-                SizedBox(height: 8,),
-                Text(r"$199",style:TextStyle(color:Colors.grey,letterSpacing:1   ) ,),
-                SizedBox(height: 10,),
-
-              ],
-            ),
-          ),
+          SelectedProduct(),
           SizedBox(
             height: 8,
           ),
-          Card(
-            child: Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: Column( 
-                children: [
-                  SizedBox(height: 15,),
-                  Row(mainAxisAlignment:MainAxisAlignment.spaceBetween ,
-                    children: [
-                      Text("Subtotal:",style:TextStyle(letterSpacing:1,fontSize:12  ) ,),
-                      Text(r"$299.95",style:TextStyle(color:Colors.grey ) ,),
-                    ],
-                  ),
-                  SizedBox(height: 15,),
-                  Divider(),
-                  SizedBox(height: 15,),
-                  Row(mainAxisAlignment:MainAxisAlignment.spaceBetween ,
-                    children: [
-                      Text("Taxes:",style:TextStyle(letterSpacing:1,fontSize:12  ) ,),
-                      Text(r"$0.00",style:TextStyle(color:Colors.grey ) ,),
-                    ],
-                  ),
-                  SizedBox(height: 15,),
-                  Divider(),
-                  SizedBox(height: 15,),
-                  Row(mainAxisAlignment:MainAxisAlignment.spaceBetween ,
-                    children: [Text("TOTAL:",style:TextStyle(letterSpacing:1,fontSize:16,fontWeight:FontWeight.bold   ) ,), Text(r"$299.95",style:TextStyle(color:Colors.grey ) ,)],
-                  ),
-                  SizedBox(
-                    height: 15,
-                  )
-                ],
-              ),
-            ),
-          )
-        ],
+          CartWidget()
+                  ],
       ),
     );
   }

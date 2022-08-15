@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last
 
+import 'package:e_commerce_app/custom_widgets/profilecard.dart';
 import 'package:flutter/material.dart';
 
 class Profile extends StatelessWidget {
@@ -23,48 +24,7 @@ class Profile extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(25.0),
-                  child: Column(
-                    children: [
-                      ClipOval(
-                          child: CircleAvatar(
-                              radius: 40,
-                              backgroundImage:
-                                  AssetImage("assets/images/timcook.jpg"))),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text(
-                        "Tim Cook",
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 1),
-                      ),
-                      SizedBox(
-                        height: 4,
-                      ),
-                      Text("\"I Love to buy vinyl records,iPads,and\n"
-                          "other tech gadgets!\""),
-                      Divider(),
-                      Image.asset("assets/icons/hearticon.png",width:13 ,),
-                      Text("Favorites",style:TextStyle(fontWeight:FontWeight.w600,letterSpacing: 1 ) ,),
-                      Divider(),
-                      Image.asset("assets/icons/checkicon.png",width:13 ,),
-                      Text("To Buy",style:TextStyle(fontWeight:FontWeight.w600,letterSpacing: 1 ) ,),
-                      Divider(),
-                      Image.asset("assets/icons/carticon.png",width:13 ,),
-                      Text("Purchases",style:TextStyle(fontWeight:FontWeight.w600,letterSpacing: 1 ) ,),
-                      Divider(),
-                      SizedBox(
-                        height: 40,
-                      )
-                    ],
-                  ),
-                ),
-              ),
+              child: ProfileCard()
             ),
             ElevatedButton(
               onPressed: () {},

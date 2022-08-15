@@ -1,7 +1,7 @@
-// ignore_for_file: prefer_const_constructors, sort_child_properties_last, sized_box_for_whitespace
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last, sized_box_for_whitespace, prefer_const_literals_to_create_immutables
 
 import "package:flutter/material.dart";
-import 'package:blur/blur.dart';
+
 
 class Hot extends StatelessWidget {
   const Hot({Key? key}) : super(key: key);
@@ -63,47 +63,7 @@ class Hot extends StatelessWidget {
             preferredSize: Size.fromHeight(30)),
       ),
       body: SingleChildScrollView(
-        child: Column(children: [
-          Card(
-            child: Image.asset(
-              "assets/images/laptop.jpg",
-            ).blurred(
-                colorOpacity: 0.0,
-                blur: 15.0,
-                overlay: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            InkWell(onTap:(){} ,
-                              child: Image.asset(
-                                "assets/icons/backwardtick.png",
-                                color: Colors.black,
-                              ),
-                            ),
-
-                            Image.asset(
-                              "assets/images/laptop.jpg",
-                              width: 140,
-                              height: 140,
-                            ),
-                           
-                            InkWell(onTap:(){} ,
-                              child: Image.asset(
-                                "assets/icons/forwardtick.png",
-                                color: Colors.black,
-                              ),
-                            ),
-                          ]),
-                      Text(
-                        "Hewlett Packard",
-                        style: TextStyle(
-                            fontSize: 25, fontWeight: FontWeight.bold,color:Colors.white ),
-                      )
-                    ])),
-          ),
-        ]),
+        child: Column(children: []),
       ),
     );
   }

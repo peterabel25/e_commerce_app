@@ -36,18 +36,19 @@ class _MyHomePageState extends State<MyHomePage> {
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
 
-      bottomNavigationBar: BottomNavigationBar( selectedLabelStyle:TextStyle(fontSize:8,letterSpacing:1  ) ,
-      unselectedLabelStyle:TextStyle( fontSize:8 ,letterSpacing: 1) ,
+      bottomNavigationBar: BottomNavigationBar( //selectedLabelStyle:TextStyle(fontSize:8,letterSpacing:1  ) ,
+     // unselectedLabelStyle:TextStyle( fontSize:8 ,letterSpacing: 1) ,
         selectedItemColor: Colors.white,
         unselectedItemColor: Color.fromARGB(255, 179, 175, 175),
         backgroundColor: Colors.black,
+        
         type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.menu), label: "BROWSE"),
-          BottomNavigationBarItem(icon: Icon(Icons.fireplace_outlined), label: "HOT"),
+          BottomNavigationBarItem(icon: Image(image:AssetImage("assets/icons/browsebutton.png") ), label: "BROWSE"),
+          BottomNavigationBarItem(icon: Image(image:AssetImage("assets/icons/hotitems.png") ), label: "HOT"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart_outlined), label: "CART"),
-          BottomNavigationBarItem(icon: Icon(Icons.person_outlined), label: "PROFILE"),
+              icon: Image(image:AssetImage("assets/icons/cart.png") ), label: "CART"),
+          BottomNavigationBarItem(icon:Image(image:AssetImage("assets/icons/profile.png") ) , label: "PROFILE"),
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
